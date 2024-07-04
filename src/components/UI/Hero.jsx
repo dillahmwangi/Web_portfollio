@@ -1,5 +1,5 @@
 import React from 'react'
-import profile from '../../assets/images/profile.jpeg';
+import profile1 from '../../assets/images/profile1.jpeg';
 import CountUp from 'react-countup';
 
 
@@ -83,7 +83,7 @@ const Hero = () => {
                     <div className='basis-1/3 mt-10 sm:mt-0'>
                     <figure className='flex items-center justify-center '>
                         <img 
-                        src={profile}
+                        src={profile1}
                          alt="Profile"
                          className='h-81 rounded-full' />
 
