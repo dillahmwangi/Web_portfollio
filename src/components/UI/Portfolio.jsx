@@ -78,7 +78,7 @@
 // export default Portfolio;
 
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import data from '../../assets/data/portfolioData.js';
 
 const Portfolio = () => {
@@ -88,6 +88,15 @@ const Portfolio = () => {
   const loadMoreHandler = () => {
     setNextItems(prev => prev + 3);
   };
+
+  // useEffect{()=>{
+
+  //   if(selectTab='all'){
+  //     setPortfolios (data)
+  //     } I
+  //     if(selectTab='web-des|')
+ 
+  // }}
 
   return (
     <section id='portfolio'>
@@ -121,8 +130,15 @@ const Portfolio = () => {
               <figure>
                 <img className='rounded-[8px]' src={portfolio.imgUrl} alt={portfolio.title} />
               </figure>
+
               <div className='absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black bg-opacity-50 transition-opacity duration-300'>
                 <h3 className='text-white text-lg font-semibold'>{portfolio.title}</h3>
+              </div>
+              <div className='w-full h-full flex items-center justify-center'>
+                <button className='text-white bg-headingColor hover:bg-smallTextColor py-2 px-4 rounded-[8px] font-[500] ease-in duration-200'>
+                  See Details
+                </button>
+
               </div>
             </div>
           ))}
@@ -131,7 +147,7 @@ const Portfolio = () => {
           <div className='text-center mt-8'>
             <button
               onClick={loadMoreHandler}
-              className='text-white bg-headingColor hover:bg-smallTextColor py-2 px-4 rounded-[8px] font-[500] ease-in duration-200'>
+              className='text-white bg-primaryColor hover:bg-smallTextColor py-2 px-4 rounded-[8px] font-[500] ease-in duration-200'>
               Load More
             </button>
           </div>
