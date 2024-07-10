@@ -21,15 +21,15 @@ const Portfolio = () => {
 
 
     useEffect (() =>{
-      if (selectTab = "all"){
+      if (selectTab === "all"){
         setPortfolios(data);
       }
-      if(selectTab = "web-design") {
+      if(selectTab === "web-design") {
         const filterData = data.filter(item => item.category = "Web Design");
         setPortfolios(filterData);
       }
 
-      if(selectTab = "ux-design") {
+      if(selectTab === "ux-design") {
         const filterData = data.filter(item => item.category = "Ux");
         setPortfolios(filterData);
       }
@@ -72,7 +72,7 @@ const Portfolio = () => {
                 <h3 className='text-white text-lg font-semibold'>{portfolio.title}</h3>
               </div>
               <div className='w-full h-full flex items-center justify-center'>
-                <button className='text-white bg-headingColor hover:bg-smallTextColor py-2 px-4 rounded-[8px] font-[500] ease-in duration-200'>
+                <button onClick={() => showModalHandler(portfolio.id)}className='text-white bg-headingColor hover:bg-smallTextColor py-2 px-4 rounded-[8px] font-[500] ease-in duration-200'>
                   See Details
                 </button>
 
@@ -80,20 +80,26 @@ const Portfolio = () => {
             </div>
           ))}
         </div>
-        {nextItems < portfolios.length && (
-          <div className='text-center mt-8'>
+        <div className='text-center mt-8'>
+          {nextItems < portfolios.length && data.length > 6 && (
+
             <button
               onClick={loadMoreHandler}
               className='text-white bg-primaryColor hover:bg-smallTextColor py-2 px-4 rounded-[8px] font-[500] ease-in duration-200'>
               Load More
             </button>
+      
+          )}
+
           </div>
-        )}
-      </div>
-      {
-        showModal && <Modal/>
-      }
+          </div>
+
+        {showModal && <Modal setShowModal={setShowModal} activeID={activeID}/>}
+    
+    
+     
     </section>
+
   );
 };
 
