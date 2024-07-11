@@ -16,9 +16,32 @@ const Modal = ({activeID, setShowModal}) => {
                   </figure>
                 </div>
                 <div>
-                  <h2 className='text-2xl text-headingColor font-[700]'>
+                  <h2 className='text-2xl text-headingColor font-[700] my-5'>
                     {portfolio.title}
                   </h2>
+
+                  <p className='text-[15px] leading-7 text-smallTextColor'>
+                    {portfolio.description}
+                  </p>
+
+                  <div className='mt-5 flex items-center gap-3 flex-wrap'>
+                    <h4 className=' text-[18px] text-[700]'>
+                      Technologies
+                    </h4>
+                    {
+                      portfolio.technologies.map((item, index)=> (
+                        <span
+                         key={index} 
+                         className='bg-gray-200 py-1 text-smallTextColor px-2 rounde-[5px] text-[14px] leading-0'>
+                          {item}
+                         </span>
+                      ))}
+                  </div>
+                  <a href={portfolio.siteUrl}>
+                    <button className='bg-primaryColor text-white py-2 px-4 my-8 rounded-[8px] font-[500] hover:bg-headingColor ease-in duration-300'>
+                      Live Site
+                    </button>
+                  </a>
                 </div>
       </div>
 
