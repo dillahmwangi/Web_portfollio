@@ -3,7 +3,13 @@ import portfolios from '../../assets/data/portfolioData'
 
 const Modal = ({activeID, setShowModal}) => {
 
-  const portfolio = portfolios.find(portfolios => portfolio.id = activeID);
+  console.log('activeID:', activeID);
+  console.log('portfolios:', portfolios);
+
+  const portfolio = portfolios.find(portfolio => portfolio.id === activeID);
+
+  console.log('portfolio:', portfolio);
+  
   return (
     <div className='w-full h-full fixed top-0 left-0 z-10 bg-headingColor bg-opacity-40'>
     
