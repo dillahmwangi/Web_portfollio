@@ -39,6 +39,18 @@ const Contact = () => {
                           placeholder='Write Subject'
                           className='w-full p-3 focus:outline-none rounded-[5px]'/>
                   </div>
+                  
+                  <div className='mb-5'>
+                    <input type="text"
+                          row={3}
+                          placeholder='Write Subject'
+                          className='w-full p-3 focus:outline-none rounded-[5px]'/>
+                  </div>
+
+                  <button className='w-full p-3 focus:outline-none bg-smallTextColor text-white 
+                  hover:bg-headingColor text-center ease-linear duration-150 rounded-[5px]'>
+                    Send Message
+                  </button>
 
                 </form>
 
