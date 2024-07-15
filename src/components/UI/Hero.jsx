@@ -70,7 +70,7 @@ const Hero = () => {
                         </span>
 
                         <span>
-                            <a href="#Linkedin" className='text-smallTextColor text-[15px] font-[600]'>
+                            <a href="#Email" className='text-smallTextColor text-[15px] font-[600]'>
                             <i class="ri-mail-line"></i></a>
                         </span>
                         
