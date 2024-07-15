@@ -68,6 +68,28 @@ const Footer = () => {
 
     </div>
     {/* Footer Top End */}
+    {/* Footer Bottom Start */}
+    <div className='bg-[#1b1e29] py-3 mt-14'>
+      <div className='container'>
+        <div className='flex items-center justify-center sm:justify-between'>
+          <div className='hidden sm:block'>
+            <div className='flex items-center gap-[10px]'>
+              <span className='w-[35px] h-[35px] rounded-full bg-[#2b2d33] text-white font-[500] text-[18px]
+              flex items-center justify-center'>
+                M
+
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
 
    </footer>
   )
