@@ -1,8 +1,10 @@
 import React from 'react'
 
 const Footer = () => {
+  const year = new Date().getFullYear()
  
   return (
+    
    <footer className='bg-[#12141e] pt-12'>
 
     {/* Footer Top */}
@@ -109,9 +111,9 @@ const Footer = () => {
             </div>
 
           </div>
-          <div className='flex items-center gap-[10px] sm:hidden'>
+          <div>
             <p>
-              Copyright 2024 by Mwangi Muthony - All right reserved
+              Copyright {year} developed by Mwangi Muthony - All right reserved
             </p>
           </div>
         </div>
