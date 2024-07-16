@@ -1,6 +1,7 @@
 import React from 'react'
 
 const Footer = () => {
+ 
   return (
    <footer className='bg-[#12141e] pt-12'>
 
@@ -87,7 +88,7 @@ const Footer = () => {
     </div>
     {/* Footer Top End */}
     {/* Footer Bottom Start */}
-    <div className='bg-[#1b1e29] py-3 mt-14'>
+    <div className='bg-[#1b1e29] py-5 mt-14'>
       <div className='container'>
         <div className='flex items-center justify-center sm:justify-between'>
           <div className='hidden sm:block'>
@@ -108,13 +109,17 @@ const Footer = () => {
             </div>
 
           </div>
-
+          <div className='flex items-center gap-[10px] sm:hidden'>
+            <p>
+              Copyright 2024 by Mwangi Muthony - All right reserved
+            </p>
+          </div>
         </div>
 
       </div>
 
-
     </div>
+    {/* Footer bottom end */}
 
    </footer>
   )
