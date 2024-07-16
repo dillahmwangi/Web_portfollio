@@ -15,7 +15,7 @@ const Footer = () => {
 
         <a href="#contact">
             <button className='bg-primaryColor text-white font-[500] flex items-center gap-2
-             hover:bg-smallTextColor ease-in duration-300 py-2 px-4 rounded-[8px]'>
+             hover:bg-gray-400 ease-in duration-300 py-2 px-4 rounded-[8px]'>
             <i class="ri-mail-line"></i>
             Hire Me
             </button>
@@ -65,6 +65,24 @@ const Footer = () => {
           </div>
 
       </div>
+      <div>
+    <ul className='flex items-center justify-center gap-10 mt-10'>
+
+  <li>
+    <a className='text-gray-400 font-[600]' href="#about">About</a>
+  </li>
+  <li>
+    <a className='text-gray-400 font-[600]' href="#services">Services</a>
+  </li>
+  <li>
+    <a className='text-gray-400 font-[600]' href="#portfolio">Portfolio</a>
+  </li>
+  <li>
+    <a className='text-gray-400 font-[600]' href="#contact">Contact</a>
+  </li>
+
+</ul>
+</div>
 
     </div>
     {/* Footer Top End */}
@@ -77,8 +95,15 @@ const Footer = () => {
               <span className='w-[35px] h-[35px] rounded-full bg-[#2b2d33] text-white font-[500] text-[18px]
               flex items-center justify-center'>
                 M
-
               </span>
+
+              <div className='loading-[200px]'>
+                <h2 className='text-blue-200 font-[500] text-[18px]'>Mwangi Muthony</h2>
+                <p className='text-gray-400 text-[14px] font-[500]'>
+                  Personal
+
+                </p>
+              </div>
 
             </div>
 
