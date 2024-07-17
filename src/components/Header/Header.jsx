@@ -20,8 +20,18 @@ const Header = () => {
     };
   }, []);
 
-  const handleClick = e =>
-    e.prevent
+  const handleClick = e =>{
+    e.preventDefault();
+
+    const targetAttr = e.target.getAttribute('href')
+    const location = document.querySelector(targetAttr).offsetTop
+
+    window.scrollTo({
+      top: location -80,
+      left:0,
+    })
+  }
+   
 
   return (
     <header ref={headerRef} className="w-full h-[80px] leading-[80px] flex items-center">
@@ -47,16 +57,16 @@ const Header = () => {
           <div className='menu'>
             <ul className='flex items-center gap-10'>
               <li>
-                <a className='text-smallTextColor font-[600]' href="#about">About</a>
+                <a onClick={handleClick} className='text-smallTextColor font-[600]' href="#about">About</a>
               </li>
               <li>
-                <a className='text-smallTextColor font-[600]' href="#services">Services</a>
+                <a onClick={handleClick} className='text-smallTextColor font-[600]' href="#services">Services</a>
               </li>
               <li>
-                <a className='text-smallTextColor font-[600]' href="#portfolio">Portfolio</a>
+                <a onClick={handleClick} className='text-smallTextColor font-[600]' href="#portfolio">Portfolio</a>
               </li>
               <li>
-                <a className='text-smallTextColor font-[600]' href="#contact">Contact</a>
+                <a onClick={handleClick} className='text-smallTextColor font-[600]' href="#contact">Contact</a>
               </li>
             </ul>
           </div>
