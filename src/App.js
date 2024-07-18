@@ -1,4 +1,4 @@
-import { useEffect } from 'react'; 
+import { useState, useEffect } from 'react'; 
 import Aos from 'aos';
 
 
@@ -13,18 +13,22 @@ import Contact from './components/UI/Contact';
 import Modal from './components/UI/Modal';
 
 function App() {
+
+    const [showModal, setShowModal] = useState(false);
+    const [activeID, setActiveID] = useState(null);
  
   useEffect(() => {
     Aos.init();
   }, []);
   
+
   return <>
   <Header/>
     <main>
       <Hero/>
       <Services/>
-      <Portfolio/>
-      <Modal/>
+      <Portfolio setActiveID={setActiveID} setShowModal={setShowModal} />
+      {showModal && <Modal activeID={activeID} setShowModal={setShowModal} />}
       <Contact/>
 
     </main>
