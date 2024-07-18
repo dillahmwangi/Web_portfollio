@@ -112,7 +112,7 @@ const Footer = () => {
 
           </div>
           <div>
-            <p>
+            <p className='text-gray-400'>
               Copyright {year} developed by Mwangi Muthony - All right reserved
             </p>
           </div>
