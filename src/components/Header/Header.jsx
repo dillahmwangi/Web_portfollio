@@ -32,7 +32,7 @@ const Header = () => {
       left:0,
     })
   }
-  const togglemenu = () => menuRef.current.toggle('show__menu')
+  const togglemenu = () => menuRef.current.classList.toggle('show__menu')
    
 
   return (
@@ -56,7 +56,7 @@ const Header = () => {
           {/* End of Logo */}
 
           {/* Start of Menu */}
-          <div className='menu'>
+          <div className='menu' ref={menuRef} onClick={togglemenu}>
             <ul className='flex items-center gap-10'>
               <li>
                 <a onClick={handleClick} className='text-smallTextColor font-[600]' href="#about">About</a>
@@ -82,7 +82,7 @@ const Header = () => {
               <i className="ri-send-plane-line">Let's Talk</i>
             </button>
 
-            <span onClick className='text-2xl text-smallTextColor md:hidden cursor-pointer'>
+            <span onClick={togglemenu} className='text-2xl text-smallTextColor md:hidden cursor-pointer'>
               <i className="ri-menu-line"></i>
             </span>
           </div>
