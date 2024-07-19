@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react';
 
 const Header = () => {
   const headerRef = useRef(null);
+  const menuRef = useRef(null);
 
   const handleScroll = () => {
     if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
@@ -31,6 +32,7 @@ const Header = () => {
       left:0,
     })
   }
+  const togglemenu = () => menuRef.current.toggle('show__menu')
    
 
   return (
@@ -80,7 +82,7 @@ const Header = () => {
               <i className="ri-send-plane-line">Let's Talk</i>
             </button>
 
-            <span className='text-2xl text-smallTextColor md:hidden cursor-pointer'>
+            <span onClick className='text-2xl text-smallTextColor md:hidden cursor-pointer'>
               <i className="ri-menu-line"></i>
             </span>
           </div>
