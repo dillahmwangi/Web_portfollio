@@ -46,7 +46,7 @@ const Header = () => {
             </span>
             <div className='leading-[20px]'>
               <h2 className='text-xl text-smallTextColor font-[700]'>
-                Mwangi Muthony Charity
+                Muthony M.
               </h2>
               <p className='text-smallTextColor text-[16px] font-[500]'>
                 personal
